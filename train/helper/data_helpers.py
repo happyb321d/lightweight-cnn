@@ -55,22 +55,22 @@ def get_datasets_tobacco(path):
     # arr = os.listdir(path)
     # import random
     # arr = random.sample(arr, 3)
-    arr = ['1.txt'] 
-    print(arr) 
+    arr = ['1.txt', '7.txt', '8.txt']
+    print(arr)
     datasets = dict()
     class_value = 0
     datasets['data'] = []
-    datasets['target'] = [] 
-    datasets['target_names'] = [] 
+    datasets['target'] = []
+    datasets['target_names'] = []
     
     # break_percent = float(input("enter precent of break dataset: ")) # precent of break dataset between 0 , 100
     # break_percent = break_percent/100  
 
-    for input_file in arr: 
+    for input_file in arr:
         read_file = path + input_file
         data = list(open(read_file, "r").readlines())
         # data = list(open(read_file, "r").readlines())
-        # total_lines = len(data) 
+        # total_lines = len(data)
         # number_line_to_break = int(len(data) * break_percent)
         # start_line_number_to_break = random.randint(1, int(len(data) * (1 - break_percent))) # We used (1 - break_percent) for this because the selected number of lines may exceed the total number of lines, starting from the given line.
         # data = list(open(read_file, "r").readlines()[start_line_number_to_break:start_line_number_to_break+number_line_to_break]) #select sectetion of dataset equal break_percent variable 
