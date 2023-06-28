@@ -197,7 +197,7 @@ with tf.Graph().as_default():
             train_summary_writer.add_summary(summaries, step)
             
             # باز کردن فایل برای نوشتن (و اضافه کردن سطر جدید به آخر آن)
-            with open(os.path.join(ROOT_DIR, "train/output/Optimized-Text-CNN.txt"), 'a') as f:
+            with open(os.path.join(ROOT_DIR, "train/output/Optimized-Text-CNN-RMSProp.txt"), 'a') as f:
                 # نوشتن متن جدید به فایل 
                 f.write("{},{:g},{:g},{:g}\n"
                   .format(step,loss,accuracy,learning_rate)) 
