@@ -11,7 +11,6 @@ from tensorflow.contrib import learn
 import yaml
 import math
 import sys
-from keras.optimizers import Nadam
 
 ROOT_DIR = os.path.abspath("../")
 sys.path.append(ROOT_DIR)
@@ -113,8 +112,7 @@ with tf.Graph().as_default():
             l2_reg_lambda=FLAGS.l2_reg_lambda)
         
         global_step = tf.compat.v1.Variable(0, name="global_step", trainable=False)
-        # optimizer = tf.keras.optimizers.Nadam(cnn.learning_Rate)
-        optimizer = Nadam(cnn.learning_rate )
+        optimizer = tf.contrib.opt.NadamOptimizer(learning_rate = 0.004)
         grads_and_vars = optimizer.compute_gradients(cnn.loss)
         train_op = optimizer.apply_gradients(grads_and_vars, global_step=global_step)
         

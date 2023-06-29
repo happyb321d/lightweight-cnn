@@ -55,7 +55,7 @@ def get_datasets_tobacco(path):
     # arr = os.listdir(path)
     # import random
     # arr = random.sample(arr, 3)
-    arr = ['1.txt', '7.txt', '8.txt']
+    arr = ['1.txt', '6.txt', '8.txt']
     print(arr)
     datasets = dict()
     class_value = 0
